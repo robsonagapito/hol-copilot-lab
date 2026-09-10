@@ -275,4 +275,6 @@ Congratulations! You have now completed all seven exercises in the GitHub Copilo
 
 <div align="center">
   <a href="Lab-6-MCP.md"><strong>&larr; Previous Lab: MCP</strong></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="Lab-8-Skills.md"><strong>Next Lab: Skills &rarr;</strong></a>
 </div>
