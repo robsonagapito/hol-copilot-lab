@@ -2,6 +2,8 @@
 
 #### Duration: 45 minutes
 
+> **Access requirement:** This Lab depends on a paid GitHub Copilot plan that includes Coding Agent. The organization's GitHub administrator must enable and configure the feature for the account or repository before it can be used. If Coding Agent is unavailable, review the workflow conceptually and continue with the provided prompts and review steps.
+
 ## 🎯 Learning Objectives
 
 By the end of this exercise, you will:
