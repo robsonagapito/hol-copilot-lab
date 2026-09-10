@@ -30,11 +30,17 @@ Use the customization that matches the scope of the guidance:
 
 | Customization | Purpose | Example |
 |---|---|---|
-| Repository instructions | Rules that apply broadly to the project | TypeScript conventions and common commands |
+| `.github/copilot-instructions.md` | Project-wide rules and context, similar to Claude Code's `CLAUDE.md` | TypeScript conventions and common commands |
+| `AGENTS.md` | General instructions for AI agents, at the repository or folder level | Shared guidance for multiple agents |
+| `*.instructions.md` | Instructions that apply to specific files or contexts | React or test-specific conventions |
 | Skill | A reusable workflow for a specific type of task | Unit testing or frontend development |
 | Prompt file | A repeatable prompt for one focused task | Explain a selected code snippet |
 | Agent | A specialized worker with its own role and context | Frontend implementation agent |
 | MCP server | Connection to an external tool or service | GitHub Issues or Microsoft Learn |
+
+If you have used Claude Code, think of `.github/copilot-instructions.md` as the closest GitHub Copilot equivalent to `CLAUDE.md`: both provide project-wide context and rules that guide the assistant across tasks. The file format and location are different because each tool has its own customization system.
+
+Use `*.instructions.md` files when a rule should apply only to a particular file type or part of the project. These files are stored in `.github/instructions/` and can use an `applyTo` pattern. Skills are different: they describe focused, reusable workflows that Copilot loads when the task requires them.
 
 A useful way to remember the relationship is:
 
@@ -255,6 +261,6 @@ In Exercise 9, you will create specialized Agents that use the `dev-front` and `
   <tr>
     <td><a href="Lab-7-Customizing-Copilot.md"><strong>&larr; Previous Lab</strong></a></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-    <td><strong>Next Lab: Agents &rarr;</strong></td>
+    <td><a href="Lab-9-Agents.md"><strong>Next Lab: Agents &rarr;</strong></a></td>
   </tr>
 </table>

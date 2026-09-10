@@ -35,6 +35,10 @@
             {
                 "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Copilot-Hands-on-lab/refs/heads/main/Instructions/Labs/Lab-8-Skills.md",
                 "Order": 8
+            },
+            {
+                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/GitHub-Copilot-Hands-on-lab/refs/heads/main/Instructions/Labs/Lab-9-Agents.md",
+                "Order": 9
             }
         ]
     }
