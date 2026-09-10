@@ -52,19 +52,24 @@ Different models excel at different types of tasks. For detailed information abo
 
 GitHub is now also offering a new auto model selection feature within Visual Studio Code that automatically chooses the best model for your specific task based on context and requirements. This can help streamline your workflow by ensuring you're always using the most suitable AI model without manual selection. More information can be found here: [Auto Model Selection](https://docs.github.com/copilot/concepts/auto-model-selection).  
 
-### 💰 Model Pricing and Usage Limits
+### 🪙 Saving Tokens with Modes and Models
 
-**Important**: Different AI models have different pricing structures and usage limits:
+Using GitHub Copilot efficiently is not only about choosing a powerful model. It is also about selecting the right mode and providing only the context needed for the task. Good context management can reduce repetition, improve response quality, and help you get more work done with fewer requests.
 
-- **0x Models**: Unlimited usage within your Copilot subscription
-- **Other Models**: Have different cost multipliers and usage limits
-- **Auto Model Selection**: Will automatically choose from a variety of models with different multipliers at a 10% discount
-- **Usage Allowances**: 
-    - Copilot Business: 300 requests per user per month
-    - Copilot Enterprise: 1,000 requests per user per month
-- **Additional Requests**: Available at $0.04 each when you exceed your monthly allowance
+Use the modes according to the size and purpose of the task:
 
-For complete details on model pricing and billing, see: [GitHub Copilot Billing Documentation](https://docs.github.com/copilot/concepts/billing/copilot-requests)
+- **Ask**: Use for focused questions, explanations, troubleshooting, and codebase exploration. Start here when you need information without making changes.
+- **Plan**: Use before a complex task to clarify requirements, identify affected files, and define implementation steps. A good plan can prevent repeated prompts and unnecessary revisions.
+- **Agent**: Use when the task requires coordinated changes, tool usage, or work across multiple files. Avoid using it for questions that Ask can answer directly.
+
+Follow these practices to use tokens efficiently:
+
+- Provide the smallest relevant context instead of including unrelated files or the entire workspace.
+- Write clear prompts with the goal, constraints, and expected result in one request.
+- Ask focused follow-up questions instead of repeating the full original prompt.
+- Use a faster model for simple explanations and routine tasks; choose a model with stronger reasoning when the task involves architecture, debugging, or multiple dependencies.
+- Use Plan mode to break large requests into clear steps before asking Agent mode to implement them.
+- Review Copilot's response before sending another request so you can refine the next prompt with specific feedback.
 
 
 ### 🔄 Experimenting with Different Models

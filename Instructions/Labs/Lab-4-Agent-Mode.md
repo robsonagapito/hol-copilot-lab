@@ -31,8 +31,19 @@ GitHub Copilot Agent mode represents a significant evolution in AI-assisted deve
 - ✅ Complex code migrations or upgrades
 - ✅ Comprehensive documentation generation
 
-### Billing Considerations:
-When you use Copilot agent mode, each prompt you enter counts as one premium request, multiplied by the model’s multiplier. For example, if you're using an included model—which has a multiplier of 0—your prompts won’t consume any premium requests. Copilot may take several follow-up actions to complete your task, but these follow-up actions do not count toward your premium request usage. Only the prompts you enter are billed—tool calls or background steps taken by the agent are not charged.
+### Using Agent Mode Efficiently:
+Agent mode can perform several actions autonomously, so the quality of the initial prompt and the context you provide have a direct impact on the efficiency of the session. A clear goal helps the Agent spend fewer turns clarifying requirements or correcting avoidable misunderstandings.
+
+Follow these practices to use Agent mode efficiently:
+
+- Use Plan mode first to define the scope, affected files, implementation steps, and validation criteria.
+- Include the approved plan, relevant constraints, and expected outcome in the Agent prompt.
+- Provide only the context the Agent needs, such as coverage results, related files, and project conventions.
+- Ask the Agent to work toward a measurable goal and to verify the result with tests or coverage reports.
+- Avoid interrupting the Agent with repeated instructions while it is working through the approved plan.
+- If the task is too large, divide it into smaller goals so each session has a clear scope.
+- Choose a model appropriate to the task: faster models for straightforward work and stronger reasoning models for complex debugging or architectural decisions.
+- Review the Agent's progress and results before sending a follow-up prompt, then provide specific feedback instead of repeating the original request.
 
 ## 🍎 Scenario: Boosting The Daily Harvest's Test Coverage
 
