@@ -148,7 +148,7 @@ Ask GitHub Copilot some questions to help you understand the organization of the
 
 When you ask these questions, GitHub Copilot will analyze the files and folders in your workspace and provide a structural breakdown, including:
 - **Folder Roles**: Explanations of what code lives in main directories like `src/`, `tests/`, `public/`, or `components/`.
-- **Key Files**: Identification of critical files such as `package.json`, `README.md`, or main entry points (e.g., `index.js`, `main.py`).
+- **Key Files**: Identification of critical files such as `eCommApp/package.json`, `eCommApp/README.md`, or main entry points (e.g., `index.js`, `main.py`).
 - **Architectural Patterns**: Insights into how the project is organized (e.g., MVC, layered architecture, microservices).
 - **Configuration Details**: Information about configuration files like environment variables (`.env`), build configuration (e.g., `webpack.config.js`), or database connection settings.
 
@@ -303,27 +303,27 @@ Can you identify which files or functions have low or missing test coverage?
 What would be good candidates for adding more tests to improve coverage?
 ```
 
-## 🎁 Optional Task: Building a Better README
+## 🎁 Optional Task: Building a Better `eCommApp/README.md`
 
-Now that you understand the project structure and setup process, let's use GitHub Copilot to improve the project documentation for future developers.
+Now that you understand the project structure and setup process, let's use GitHub Copilot to improve `eCommApp/README.md` for future developers. This activity targets the README inside the application directory, not the repository root README.
 
 ### Instructions:
-1. Use GitHub Copilot to analyze the current README (if it exists) and suggest improvements. See the below sample prompts if you get stuck.
-2. Create or enhance documentation based on your exploration.
+1. Use GitHub Copilot to analyze `eCommApp/README.md` and suggest improvements. See the below sample prompts if you get stuck.
+2. Create or enhance `eCommApp/README.md` based on your exploration.
 
 <details>
   <summary>Sample Prompts</summary>
 
   ```
-  Does this project have a README? If so, what's missing that would help new developers?
+  Analyze eCommApp/README.md. What is missing that would help new developers set up and work on the application?
   ```
 
   ```
-  Based on our conversation about this project, can you help me create a comprehensive "Quick Start Guide" for new developers? Include setup steps, key commands, and important files to know about.
+  Based on our conversation about this project, help me improve eCommApp/README.md with a comprehensive "Quick Start Guide". Include setup steps, key commands, tests, and important files to know about.
   ```
 
   ```
-  Can you suggest a better project description and feature list for the README based on the actual codebase?
+  Can you suggest a better project description and feature list for eCommApp/README.md based on the actual codebase?
   ```
 
 </details>
