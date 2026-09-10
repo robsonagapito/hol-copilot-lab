@@ -24,6 +24,7 @@ By completing the Labs, participants will learn how to:
 | Lab | Topic | Main Focus |
 |---|---|---|
 | [Lab 1](Instructions/Labs/Lab-1-Getting-Started.md) | Getting Started | Set up the environment, repository, VS Code, and GitHub Copilot. |
+| [Lab 1a](Instructions/Labs/Lab-1a-Getting-Started-2.md) | Alternative Local Setup | Set up the training with your own GitHub account and local VS Code installation instead of the Microsoft-provided virtual machine. Skip this Lab if Lab 1 was completed. |
 | [Lab 2](Instructions/Labs/Lab-2-Understanding-Project.md) | Understanding the Project | Explore a codebase with Ask mode, identify the technology stack, run the application, and improve `eCommApp/README.md`. |
 | [Lab 3](Instructions/Labs/Lab-3-Code-Editing.md) | Planning and Writing Unit Tests | Use Autocomplete and Plan mode to design and write tests with Copilot assistance. |
 | [Lab 4](Instructions/Labs/Lab-4-Agent-Mode.md) | Agent Mode | Use Plan and Agent modes to work toward an 80% code coverage goal. |
