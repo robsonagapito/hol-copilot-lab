@@ -252,6 +252,12 @@ Congratulations! You've successfully used GitHub Copilot Coding Agent to autonom
 
 In Exercise 6, we'll take a look at bringing additional context to GitHub Copilot through the use of **MCP Servers** to provide new functionality and information to smooth out your workflows.
 
-#### You have successfully completed the lab. Click on **Next >>** to continue to the next lab.
+#### You have successfully completed the lab.
 
-![](../../media/next-page.png)
+<table align="center">
+  <tr>
+    <td><a href="Lab-4-Agent-Mode.md"><strong>&larr; Previous Lab</strong></a></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td><a href="Lab-6-MCP.md"><strong>Next Lab &rarr;</strong></a></td>
+  </tr>
+</table>

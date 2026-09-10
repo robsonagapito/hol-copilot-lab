@@ -198,6 +198,12 @@ Great work! You've successfully used GitHub Copilot's Autocomplete and Plan mode
 
 In Exercise 4, we'll explore GitHub Copilot's **Agent mode** to tackle more complex, multi-file tasks like implementing the complete shopping cart feature with database integration, API endpoints, and frontend components.
 
-#### You have successfully completed the lab. Click on **Next >>** to continue to the next lab.
+#### You have successfully completed the lab.
 
-![](../../media/next-page.png)
+<table align="center">
+   <tr>
+      <td><a href="Lab-2-Understanding-Project.md"><strong>&larr; Previous Lab</strong></a></td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+      <td><a href="Lab-4-Agent-Mode.md"><strong>Next Lab &rarr;</strong></a></td>
+   </tr>
+</table>

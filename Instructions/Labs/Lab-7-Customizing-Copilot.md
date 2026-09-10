@@ -272,3 +272,7 @@ In this exercise, we explored how to customize GitHub Copilot's behavior using c
 ## 🎉 Conclusion
 
 Congratulations! You have now completed all seven exercises in the GitHub Copilot Labs series. You should now have a solid understanding of how to leverage GitHub Copilot's various modes, tools, and customization options to enhance your development workflow. Keep experimenting with these features to discover new ways they can assist you in your coding journey!
+
+<div align="center">
+  <a href="Lab-6-MCP.md"><strong>&larr; Previous Lab: MCP</strong></a>
+</div>

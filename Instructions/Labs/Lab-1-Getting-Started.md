@@ -179,6 +179,8 @@ Learner Support Contacts:
 
 In this lab, you successfully set up your development environment, logged into GitHub, created a new repository, and configured Visual Studio Code with GitHub Copilot. 
 
-#### You have successfully completed the lab. Click on **Next >>** to continue to the next lab.
+#### You have successfully completed the lab.
 
-![](../../media/next-page.png)
+<div align="center">
+   <a href="Lab-2-Understanding-Project.md"><strong>Next Lab: Explore the Project &rarr;</strong></a>
+</div>

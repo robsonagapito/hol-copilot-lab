@@ -465,6 +465,12 @@ Congratulations! You've successfully used GitHub Copilot Chat in Ask mode to:
 
 In the next exercise, we'll use what we've learned about the codebase to start improving test coverage and implementing new features for The Daily Harvest's e-commerce platform!
 
-#### You have successfully completed the lab. Click on **Next >>** to continue to the next lab.
+#### You have successfully completed the lab.
 
-![](../../media/next-page.png)
+<table align="center">
+  <tr>
+    <td><a href="Lab-1-Getting-Started.md"><strong>&larr; Previous Lab</strong></a></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td><a href="Lab-3-Code-Editing.md"><strong>Next Lab &rarr;</strong></a></td>
+  </tr>
+</table>

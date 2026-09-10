@@ -196,6 +196,12 @@ Congratulations! You've successfully extended GitHub Copilot's capabilities usin
 
 In Exercise 7, we'll take the extendability we received by using MCPs and expand that customizability further through the use of __Custom Instructions files__ to ensure GitHub Copilot has both a thorough understanding of our work's context _and_ the format in which we want our responses.
 
-#### You have successfully completed the lab. Click on **Next >>** to continue to the next lab.
+#### You have successfully completed the lab.
 
-![](../../media/next-page.png)
+<table align="center">
+  <tr>
+    <td><a href="Lab-5-Agentic-Coding.md"><strong>&larr; Previous Lab</strong></a></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td><a href="Lab-7-Customizing-Copilot.md"><strong>Next Lab &rarr;</strong></a></td>
+  </tr>
+</table>

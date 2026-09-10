@@ -279,6 +279,12 @@ Congratulations! You've successfully used GitHub Copilot Chat in Agent mode to a
 
 In Exercise 5, we'll take things further by exploring how GitHub Copilot Coding Agent can work autonomously in the background to assist with your coding tasks directly from a GitHub Issue. 
 
-#### You have successfully completed the lab. Click on **Next >>** to continue to the next lab.
+#### You have successfully completed the lab.
 
-![](../../media/next-page.png)
+<table align="center">
+   <tr>
+      <td><a href="Lab-3-Code-Editing.md"><strong>&larr; Previous Lab</strong></a></td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+      <td><a href="Lab-5-Agentic-Coding.md"><strong>Next Lab &rarr;</strong></a></td>
+   </tr>
+</table>
