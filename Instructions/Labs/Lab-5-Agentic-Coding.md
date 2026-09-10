@@ -25,7 +25,7 @@ Today, you'll explore this revolutionary feature by:
 
 ## ⌨️ Introduction to Coding Agent
 
-Unlike the IDE modes of Ask, Edit, and Agent, Coding Agent works within the GitHub.com user interface. Rather than engaging in a back and forth, iterative approach, utilizing Coding Agent involves delegating tasks to the agent, giving the agent time to work, then returning to see the results of GitHub Copilot's work.
+Unlike the IDE modes of Ask, Plan, and Agent, Coding Agent works within the GitHub.com user interface. Rather than engaging in a back and forth, iterative approach, utilizing Coding Agent involves delegating tasks to the agent, giving the agent time to work, then returning to see the results of GitHub Copilot's work. Coding Agent is a separate GitHub workflow from Agent mode in the IDE.
 
 Coding Agent can...
 - Fix bugs

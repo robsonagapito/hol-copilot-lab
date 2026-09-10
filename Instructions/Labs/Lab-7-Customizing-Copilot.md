@@ -92,7 +92,7 @@ Now that we have an custom instructions files ready to guide GitHub Copilot to g
 
 __Instructions:__
 
-1. Switch GitHub Copilot to Ask Mode, and ask how it would plan to develop a new feature of your choice. Did GitHub Copilot's response match or break any of the rules from the instructions file?
+1. Switch GitHub Copilot to Plan mode, and ask how it would plan to develop a new feature of your choice. Did GitHub Copilot's response match or break any of the rules from the instructions file?
 2. Switch back to Agent Mode, and ask GitHub Copilot to utilize the `create_issue` tool in the GitHub MCP Server to push an issue detailing that plan to your GitHub repository.
 
 <details>
@@ -202,7 +202,7 @@ __Instructions:__
 
 ### Custom Chat Modes
 
-As discussed in labs 2, 3, and 4, GitHub Copilot comes with three modes out of the box: Ask, Edit, and Agent mode. We have become quite familiar with these over the past labs, but what if we want to have a mode that is more tailored to our particular environment? Much like how custom instructions files help develop GitHub Copilot's understanding of an environment, custom chat modes develop the goals GitHub Copilot strives for when constructing a response.
+As discussed in labs 2, 3, and 4, GitHub Copilot comes with three modes out of the box: Ask, Plan, and Agent mode. We have become quite familiar with these over the past labs, but what if we want to have a mode that is more tailored to our particular environment? Much like how custom instructions files help develop GitHub Copilot's understanding of an environment, custom chat modes develop the goals GitHub Copilot strives for when constructing a response.
 
 Much like how we formatted our prompt files, chat mode configuration files are also broken up into a header and a body. The header, using YAML, can involve three optional components:
 
@@ -222,8 +222,8 @@ __Instructions:__
 2. Click on the cogwheel in the top-right corner of the Chat window
 3. In the drop-down menu, select "Modes"
 4. You should now see a new drop-down menu in your command palette at the top of your IDE. Click the button that says "Create new custom chat mode file..."
-5. Choose to save this new file in `.github/chatmodes`, then name your file "Plan"
-6. You should now see a template generated titled `Plan.chatmode.md`
+5. Choose to save this new file in `.github/chatmodes`, then name your file "Feature Planning"
+6. You should now see a template generated titled `Feature Planning.chatmode.md`
 7. From this template, take a few minutes to build a custom chat mode that will plan out how to tackle new code changes
 
 <details>
@@ -251,7 +251,7 @@ __Instructions:__
 </details>
 
 8. To use this chat mode, return to your GitHub Copilot Chat window. At the bottom, where your prompt is entered, click your currently selected mode
-9. In the drop-down list provided, choose "Plan"
+9. In the drop-down list provided, choose "Feature Planning"
 10. Now, write a prompt to GitHub Copilot using this new mode about a new feature you would like to implement, and see how your answer reflects the goals provided by the chat mode file you created
 
 ## 🏆 Exercise Wrap-up

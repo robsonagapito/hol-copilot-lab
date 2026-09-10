@@ -9,7 +9,7 @@ By the end of this exercise, you will be able to...
 - Explain what MCP servers are and how they connect external knowledge to GitHub Copilot
 - Enable MCP integration with GitHub in this project
 - Use MCP server to pull a GitHub Issue into the IDE
-- Ask GitHub Copilot Agent to work on that issue
+- Use GitHub Copilot Agent mode with MCP tools to work with that issue
 - Understand how MCP expands GitHub Copilot’s capabilities
 
 ## 🍎 Scenario: Using Model Context Protocols to Gather External Information
@@ -106,7 +106,7 @@ __Note:__ Before moving on, please make sure your MCP Server is running.
 __Instructions:__
 
 1. The GitHub MCP server provides a large number of tools for interacting with GitHub such as Actions, Issues, Security Findings, PRs, and more. A full list of tools can be found in the [MCP documentation](https://github.com/mcp/github/github-mcp-server#available-toolsets). 
-2. Open up Github Copilot Chat and select "agent" mode.
+2. Open GitHub Copilot Chat and select **Agent mode**. Agent mode is required here because the MCP tools need to retrieve and create GitHub issues.
 3. Let's start by asking GitHub Copilot to retrieve the list of issues for this repository.  You can do this by entering the following prompt into the chat input:
   
   ```
@@ -137,7 +137,7 @@ __Instructions:__
 
 With that, you should be all set to begin work with the MCP Server.
 
-1. Open up Github Copilot Chat and select "agent" mode.
+1. Open GitHub Copilot Chat and select **Agent mode** so Copilot can use the Microsoft Learn MCP server.
 2. Let's ask GitHub Copilot to retrieve information From Microsoft about different options for hosting this application. You can do this by entering the following prompt into the chat input:
   
   ```

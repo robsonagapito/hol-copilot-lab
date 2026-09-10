@@ -10,7 +10,7 @@ Through a series of guided, real-world exercises, you will learn how to:
 - Understand GitHub Copilot’s role across all phases of the SDLC
 - Plan new features and define success criteria with GitHub Copilot
 - Use AI-powered code completions directly within the IDE
-- Leverage GitHub Copilot Chat in Ask, Edit, and Agent modes
+- Leverage GitHub Copilot Chat in Ask, Plan, and Agent modes
 - Delegate tasks to the GitHub Copilot coding agent to multiply development impact
 - Review code at scale using GitHub Copilot code reviews
 - Detect and fix security vulnerabilities using GitHub Copilot Autofix

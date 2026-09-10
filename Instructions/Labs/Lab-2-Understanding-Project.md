@@ -27,8 +27,8 @@ GitHub Copilot Chat is an AI-powered conversational interface that helps you und
 | Mode | Purpose | Best For |
 |------|---------|----------|
 | **Ask** | Get explanations and answers about code | Understanding existing code, learning new concepts |
-| **Edit** | Modify existing code with AI assistance | Refactoring, bug fixes, feature additions |
-| **Agent** | Delegate complex tasks to AI | Multi-file changes, architectural decisions |
+| **Plan** | Analyze a task and create an implementation plan without making changes | Planning features, refactoring, and tests |
+| **Agent** | Delegate complex tasks to AI for execution | Multi-file changes, implementation, and architectural decisions |
 
 For exploring an unfamiliar codebase, **Ask mode** is ideal because it allows you to:
 - Query specific files or code patterns without making changes
