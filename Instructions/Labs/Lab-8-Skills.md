@@ -212,8 +212,8 @@ Lab 8:
   dev-qa    -> defines how unit tests should be done
 
 Lab 9:
-  dev-front-agent -> the frontend specialist that loads dev-front
-  dev-qa-agent    -> the testing specialist that loads dev-qa
+  dev-front-ag -> the frontend specialist that loads dev-front
+  dev-qa-ag    -> the testing specialist that loads dev-qa
 ```
 
 A Skill is reusable guidance. An Agent is a specialized executor with a role, context, and tool permissions. In Exercise 9, you will create Agents that use these Skills instead of duplicating their rules in every agent definition.
