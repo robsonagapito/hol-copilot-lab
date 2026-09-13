@@ -47,25 +47,20 @@ The first step in utilizing Coding Agent is to create a GitHub issue outlining a
 3. For the new issue, fill in an appropriate title and description to add a _Contact Us_ page to the application. Feel free to add any specific requirements or acceptance criteria you wish. A sample issue is shown below:
 
 <details>
- 
-  <summary>Example Issue</summary>
-
-  ## User Story
-
-  ### Title
-  Add a Contact Us page
-
-  ### Description
-  A user should be able to click a "Contact Us" button, displaying a form where they can enter their name, email address, and message.
-
-  Below the message field, the user should be able to click "Submit".
-
-  When the user clicks "Submit", a pop-up should display the message "Thank you for your message" along with a "Continue" button, and the form fields should be cleared.
-
-  ### Technical Notes
-  - The Contact Us modal should be accessible from the existing header menu.
-  - The modal should be implemented as a separate component.
-  - The modal should be centered in the browser.
+<summary>Example Issue</summary>
+<pre> 
+## User Story  
+### Title  
+Add a Contact Us page  
+### Description  
+A user should be able to click a "Contact Us" button, displaying a form where they can enter their name, email address, and message.  
+Below the message field, the user should be able to click "Submit".  
+When the user clicks "Submit", a pop-up should display the message "Thank you for your message" along with a "Continue" button, and the form fields should be cleared.  
+### Technical Notes  
+- The Contact Us modal should be accessible from the existing header menu.  
+- The modal should be implemented as a separate component.  
+- The modal should be centered in the browser.  
+</pre> 
 </details>
 
 Once complete, create the issue.
