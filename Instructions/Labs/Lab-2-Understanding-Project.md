@@ -101,7 +101,7 @@ If you get stuck, try using these sample prompts to explore the project:
   ```
 
   ```
-  Can you give me a high-level overview of this project's features and functionality?
+  Looking solely at the application itself, can you give me an overview of the project's features and functionalities?
   ```
 
   ```
