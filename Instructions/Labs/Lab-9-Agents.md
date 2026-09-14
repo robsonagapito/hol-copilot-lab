@@ -10,7 +10,7 @@ By the end of this exercise, you will be able to:
 - Create a `dev-front-ag` Custom Agent linked to the `dev-front` Skill.
 - Create a `dev-qa-ag` Custom Agent linked to the `dev-qa` Skill.
 - Use agent tools and least-privilege configuration for specialized work.
-- Connect implementation and testing through a guided handoff.
+- Connect implementation and testing through an automatic agent handoff.
 - Use the Contact Us Issue from Exercise 5 as an end-to-end implementation task.
 - Review, test, and validate work produced by specialized Agents.
 
@@ -27,7 +27,7 @@ This exercise does not recreate those Skills. The Agents created here reference 
 
 ## What Is a Custom Agent?
 
-A Custom Agent is a reusable role for GitHub Copilot Chat. It combines a focused set of instructions with a selected set of tools and can define handoffs to other Agents.
+A Custom Agent is a reusable role for GitHub Copilot Chat. It combines a focused set of instructions with a selected set of tools and can automatically invoke another Agent through of the handoff.
 
 The relationship between the project customizations is:
 
@@ -74,7 +74,7 @@ Important fields include:
 | `handoffs` | Defines guided transitions to another Agent. |
 | `agents` | Controls which Agents can be used as subagents when that workflow is required. |
 
-Handoffs are intentionally visible. They let a person review the result of one stage before sending its context to the next Agent.
+Handoffs can be visible actions or automatic transitions. In this lab, the frontend-to-QA transition, so `dev-front-ag` invokes `dev-qa-ag` after implementation instead of stopping and waiting for a person to select a button.
 
 ## Exercise 9.1 - Create the `dev-qa-ag` Agent
 
@@ -92,7 +92,7 @@ The Agent is a unit-testing specialist and must:
 - Explicitly use and follow .github/skills/dev-qa/SKILL.md before creating, reviewing, or changing tests.
 - Work with Vitest, React Testing Library, user-event, and the jsdom setup in eCommApp/src/test/setup.ts.
 - Create or update unit tests for React components and report the scenarios covered.
-- Run focused tests or npm run test:run after test changes when the user approves command execution.
+- Run focused tests or npm run test:run after test changes.
 - Never modify production files under eCommApp/src/components, eCommApp/src/context, or eCommApp/src/utils.
 - If a test exposes a production bug, report it and ask for a separate frontend change instead of editing production code.
 - Return a concise report with files changed, tests run, results, and remaining risks.
@@ -146,7 +146,9 @@ The Agent is a React frontend specialist and must:
 - Review the diff and run the relevant build, lint, or validation commands before reporting completion.
 - Return a concise report with the plan, files changed, validation performed, and remaining risks.
 
-Use the minimum tools required for reading, searching, editing frontend files, and running approved validation commands. Add a visible handoff labeled "Send to dev-qa-ag" that includes the changed files, acceptance criteria, and testing request.
+Use the minimum tools required for reading, searching, editing frontend files, running approved validation commands, and invoking another agent. The generated agent must include `agent` in `tools`, declare `agents: [dev-qa-ag]`. The handoff must include the changed files, acceptance criteria, and testing request.
+
+The generated agent must explicitly invoke `dev-qa-ag` after implementation and validation, wait for its result, and never stop at a frontend-only report or ask the user to start QA manually.
 ```
 
 ### Step 2: Review the Agent
@@ -158,6 +160,7 @@ Open `.github/agents/dev-front-ag.agent.md` and verify:
 - the body references `.github/skills/dev-front/SKILL.md`;
 - the Contact Us requirements are clear;
 - the handoff target is exactly `dev-qa-ag`;
+- `agent` is included in `tools` and `agents: [dev-qa-ag]` restricts delegation to the QA Agent;
 - tests are delegated instead of duplicated;
 - the tool list is appropriate for production changes.
 
@@ -238,34 +241,17 @@ Observe the workflow:
 2. The Agent identifies the existing header, route, modal, and style patterns.
 3. The Agent implements the feature without duplicating QA instructions.
 4. You review the proposed changes and the diff.
-5. The Agent offers the **Send to dev-qa-ag** handoff.
+5. The Agent automatically invokes `dev-qa-ag` through the **Automatically send to dev-qa-ag** handoff after implementation and validation.
 
 Do not approve or merge changes only because an Agent produced them. Review the files and behavior yourself.
 
-## Exercise 9.6 - Use the Handoff with `dev-qa-ag`
+## Automatic Handoff with `dev-qa-ag`
 
-After reviewing the frontend changes, select the handoff button. If the handoff is not available, select `dev-qa-ag` manually and provide this prompt:
+After `dev-front-ag` finishes the frontend implementation and its validation, it must invoke `dev-qa-ag` automatically.
 
-```text
-Review and test the Contact Us implementation created by dev-front-ag.
+The handoff is automatic: `dev-front-ag` remains responsible for invoking `dev-qa-ag` and must wait for the QA result before returning its final report. A human can review the combined implementation and test result afterward.
 
-Changed files:
-[Paste the files reported by dev-front-ag]
-
-Use .github/skills/dev-qa/SKILL.md. Create or update focused unit tests for:
-- Contact Us entry in the header
-- Opening and closing the modal
-- Name, email, and message fields
-- Submit behavior
-- Thank you confirmation and Continue button
-- Clearing form values after submission or closing
-
-Do not modify production files. Run the focused tests or npm run test:run and report the files changed, commands run, results, and remaining risks.
-```
-
-The handoff demonstrates a controlled workflow rather than an invisible automatic delegation. The human reviews the implementation before asking the QA Agent to proceed.
-
-## Exercise 9.7 - Review and Validate the Result
+## Exercise 9.6 - Review and Validate the Result
 
 From the `eCommApp` directory, run the project checks appropriate to the changes:
 
@@ -288,15 +274,15 @@ If a check fails, provide the specific failure to the appropriate Agent instead 
 
 ## Agent Handoffs and Least Privilege
 
-Use handoffs when a workflow has clear stages and a person should review the result between stages. For this Lab:
+Use automatic handoffs when a workflow has clear stages and the next specialist must run without an extra user turn. For this Lab:
 
 ```text
-dev-front-ag -> human review -> dev-qa-ag
+dev-front-ag -> dev-qa-ag -> combined report
 ```
 
 Use least privilege when defining tools:
 
-- `dev-front-ag` needs tools for reading, searching, editing frontend files, and running approved validation commands.
+- `dev-front-ag` needs tools for reading, searching, editing frontend files, running approved validation commands, and invoking its explicitly allowed `dev-qa-ag` subagent.
 - `dev-qa-ag` needs tools for reading, searching, editing test files, and running approved test commands.
 - A review-only Agent should receive read-only tools.
 
@@ -310,14 +296,14 @@ Before completing this exercise, confirm that:
 - `.github/agents/dev-qa-ag.agent.md` exists and references `.github/skills/dev-qa/SKILL.md`.
 - Both Agents have clear descriptions and appropriate tool lists.
 - `dev-front-ag` implemented the Contact Us functionality from the Issue or fallback story.
-- The handoff to `dev-qa-ag` was reviewed and used.
+- The automatic handoff to `dev-qa-ag` was invoked and its test result was included.
 - Tests and project checks were run, and failures were reported or fixed.
 - The final diff contains no unrelated changes.
 
 ## Reflection Questions
 
 1. What does an Agent add beyond the reusable workflow in a Skill?
-2. Why is a visible handoff preferable to an unreviewed automatic delegation for this task?
+2. What are the trade-offs of automatic delegation here, and where should the human review the combined result?
 3. How did least-privilege tools affect the safety of each Agent?
 4. Which parts of the Contact Us feature belonged to `dev-front-ag`, and which belonged to `dev-qa-ag`?
 5. How could you create a read-only review Agent for a future workflow?
@@ -326,7 +312,7 @@ Before completing this exercise, confirm that:
 
 - Custom Agents package a role, instructions, tools, and workflow transitions.
 - Skills remain the reusable source of truth for specialized procedures.
-- Handoffs connect Agents while keeping human review in the loop.
+- Automatic handoffs connect Agents so implementation and focused QA complete in one workflow; human review still happens on the combined result.
 - Least-privilege tools reduce accidental changes.
 - Agents must be reviewed and validated like any other generated code.
 
