@@ -92,7 +92,7 @@ The Agent is a unit-testing specialist and must:
 - If a test exposes a production bug, report it and ask for a separate frontend change instead of editing production code.
 - Return a concise report with files changed, tests run, results, and remaining risks.
 
-Use the minimum tools needed for reading project files, editing test files, searching symbols, and running the test command. If a test exposes a production defect, report it to the calling Agent and stop. Do not delegate production changes back to dev-front-ag. Do not use the `handoffs` frontmatter property.
+Use the minimum tools needed for reading project files, editing test files, searching symbols, and running the test command.
 ```
 
 ### Step 2: Review the Agent
