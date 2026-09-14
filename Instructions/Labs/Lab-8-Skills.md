@@ -125,10 +125,10 @@ A Skill becomes more reliable when it can point to concrete examples instead of 
 Using the dev-qa Skill conventions, create a separate file with example unit tests at .github/skills/dev-qa/examples/example-tests.md.
 
 Include at most 2 short, illustrative test snippets (not a full test suite). Choose the 2 scenarios that best demonstrate the Skill's core conventions, for example:
+
 - one happy-path render or user-interaction test
 - one test that mocks a dependency (a child component or CartContext)
-
-Keep the file short and avoid adding more snippets than requested, since extra unrequested examples increase the risk of the Skill inventing patterns that do not match this project. Add a brief comment above each snippet explaining which scenario it demonstrates. Reference this examples file from .github/skills/dev-qa/SKILL.md so the Skill loads it as a supporting resource.
+- use technique of 3A (Arrange, Act and Assert) and put comment on each fase.
 ```
 
 Open the generated `examples/example-tests.md` and confirm it only contains illustrative snippets (not a duplicate of a real test file), and that `SKILL.md` links to it as a resource. This file becomes the base reference the Skill can point to whenever it creates new tests.

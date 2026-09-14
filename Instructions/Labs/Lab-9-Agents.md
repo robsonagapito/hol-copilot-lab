@@ -162,10 +162,10 @@ Open `.github/agents/dev-front-ag.agent.md` and verify:
 
 ## Exercise 9.3 - Verify the Agent and Skill Connection
 
-Before implementing the feature, test the Agent with a read-only request:
+Before implementing the feature, test the Agent with a read-only request, seclect the dev-front-ag and write the prompt bellow:
 
 ```text
-Using the dev-front Skill, inspect eCommApp/src/components/Header.tsx and the current routes. Explain where a Contact Us entry and modal component should be connected. Do not edit files.
+Inspect eCommApp/src/components/Header.tsx and the current routes. Explain where a Contact Us entry and modal component should be connected. Do not edit files.
 ```
 
 Check the response and references. The Agent should use the `dev-front` workflow, inspect the existing header and routing patterns, and identify the smallest set of files needed.
@@ -193,6 +193,8 @@ The implementation task is the same Contact Us functionality introduced in Exerc
 If the Issue is not available, use this fallback User Story:
 
 ```text
+Only put this information in your context.
+
 ## User Story
 
 ### Title
@@ -319,7 +321,7 @@ Before completing this exercise, confirm that:
 
 You have completed the current GitHub Copilot training sequence. Continue by adapting the `dev-front-ag` and `dev-qa-ag` workflows to other components and features in The Daily Harvest project.
 
-#### You have successfully completed the lab.
+#### CONGRATS \o/ | You have successfully completed the labs.
 
 <table align="center">
   <tr>
